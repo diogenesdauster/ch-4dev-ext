@@ -59,7 +59,7 @@ async function preencheForm1() {
 
     nome.value = person.nome;
     email.value = person.email;
-    telefone.value = person.celular;
+    $(telefone).inputmask("setvalue", person.celular);
   });
 }
 
@@ -80,10 +80,11 @@ async function preencheForm2() {
     nome.value = person.nome;
     email.value = person.email;
     cemail.value = person.email;
-    telefone.value = person.celular;
-    cpf.value = person.cpf;
-    dtnascimento.value = person.data_nasc;
-    cep.value = person.cep;
+
+    $(telefone).inputmask("setvalue", person.celular);
+    $(cpf).inputmask("setvalue", person.cpf);
+    $(dtnascimento).inputmask("setvalue", person.data_nasc);
+    $(cep).inputmask("setvalue", person.cep);
     numero.value = person.numero;
 
     data.persons.pop();
